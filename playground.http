@@ -1,0 +1,23 @@
+### CREATE
+POST http://localhost:3000/users
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "sammi",
+    "email": "sammi@gmail.com"
+}
+
+### UPDATE
+PUT http://localhost:3000/users?id=792fc563-b68e-48fa-8e47-5925b793c762
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "sammi update",
+    "email": "sammiupdate@gmail.com"
+}
+
+### FIND ALL
+GET http://localhost:3000/users?id=792fc563-b68e-48fa-8e47-5925b7943c76
+Accept: application/json
