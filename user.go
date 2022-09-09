@@ -41,6 +41,13 @@ func NewUserWithID(id uuid.UUID, name, email string) *User {
 	}
 }
 
+func NewUserWithoutID(name, email string) *User {
+	return &User{
+		Name:  name,
+		Email: email,
+	}
+}
+
 const createUserQuery = `INSERT INTO users (id,name,email) VALUES ($1,$2,$3)`
 
 func (q *Queries) CreateUser(ctx context.Context, user *User) error {
